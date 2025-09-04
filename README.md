@@ -42,3 +42,39 @@ US-East-1(North Virginia)
 - Provision a new EC2 instance using the AMI created.
 
 - You now have your VirtualBox VM running as a cloud-based virtual machine inside AWS.
+
+
+# Pricing Breakdown (as of 2025, AWS standard rates):
+## Amazon S3 (storing VM image):
+- Storage: ~$0.023/GB per month (Standard Tier).
+
+- Example: A 20 GB OVA file = $0.46/month.
+
+- Data Transfer IN: Free (uploading to S3).
+
+- Data Transfer OUT (if downloading back): ~$0.09/GB.
+## VM Import/Export:
+- No additional fee for importing VMs into EC2 (AWS only charges for the underlying resources: S3, EC2, EBS).
+## EC2 Instance (after import):
+- Pricing depends on instance type + region.
+Example (US East 1):
+t3.medium (2 vCPU, 4 GiB RAM): $0.0416/hour (~$30/month if always running).
+
+t3.large (2 vCPU, 8 GiB RAM): $0.0832/hour (~$60/month).
+
+- If you run 24/7, costs accumulate. If you stop instances when not needed, you only pay for storage.
+## EBS Volumes (backing EC2):
+- ~$0.10/GB per month (General Purpose SSD gp3).
+
+- Example: A 30 GB root volume = $3/month.
+## IAM:
+- Free (no charge for IAM users/roles/policies).
+## Example Total Monthly Cost (for 1 migrated VM, ~20 GB image, t3.medium instance)
+- S3 Storage: $0.46/month
+
+- EBS Storage: $3.00/month
+
+- EC2 Instance (t3.medium 24/7): ~$30.00/month
+
+- IAM: Free
+- ✅ Total ≈ $33–$35/month per VM
