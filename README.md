@@ -58,9 +58,9 @@ US-East-1(North Virginia)
 ## EC2 Instance (after import):
 - Pricing depends on instance type + region.
 Example (US East 1):
-t3.medium (2 vCPU, 4 GiB RAM): $0.0416/hour (~$30/month if always running).
+- t3.medium (2 vCPU, 4 GiB RAM): $0.0416/hour (~$30/month if always running).
 
-t3.large (2 vCPU, 8 GiB RAM): $0.0832/hour (~$60/month).
+- t3.large (2 vCPU, 8 GiB RAM): $0.0832/hour (~$60/month).
 
 - If you run 24/7, costs accumulate. If you stop instances when not needed, you only pay for storage.
 ## EBS Volumes (backing EC2):
