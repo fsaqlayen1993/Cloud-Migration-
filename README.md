@@ -11,8 +11,7 @@ A basic part of cloud computing is learning how to move applications from local 
 US-East-1(North Virginia)
 
 # Services:
-- Amazon S3
-- AWS Lambda
-- Amazon Rekognition
-- Amazon DynamoDB
-- Amazon SNS
+-Oracle VirtualBox (local, no cost if you already have it).
+-Amazon S3: for temporary storage of the OVA.
+-AWS IAM: for secure roles & permissions (no cost).
+-Amazon EC2 (VM Import/Export + AMI + Instance):the core migration service.
