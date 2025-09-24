@@ -78,3 +78,14 @@ Example (US East 1):
 
 - IAM: Free
 - ✅ Total ≈ $33–$35/month per VM
+
+## Monitoring
+- Metrics Monitoring: CloudWatch automatically collects key EC2 metrics such as CPU utilization, disk read/write, and network traffic. You can also install the CloudWatch agent to track more detailed metrics like memory usage, disk space, and process-level performance.
+
+- Dashboards: CloudWatch dashboards give you a centralized, real-time view of your system’s health, making it easier to monitor trends and spot performance issues.
+
+- Logs Management: By configuring the CloudWatch agent, system and application logs can be streamed directly into CloudWatch Logs, where you can search, filter, and set alerts for specific error patterns.
+
+- Alarms and Alerts: You can define thresholds (e.g., CPU usage > 80% for 5 minutes) and configure CloudWatch Alarms to trigger if those thresholds are breached. When alarms are triggered, Amazon SNS can send email or SMS alerts so you can take immediate action.
+
+- Proactive Issue Detection: Instead of waiting for a failure, CloudWatch helps you detect anomalies early, minimizing downtime and ensuring your migrated application remains highly available.
